@@ -103,7 +103,7 @@
     return [RACSignal createSignal:^RACDisposable *(id<RACSubscriber> subscriber) {
         NSDictionary *parameters = @{
             @"access_token" : accessToken[@"access_token"],
-            @"fields" : @"name,first_name,last_name,verified,email,location,link"
+            @"fields" : @"name,first_name,last_name,verified,email,location,link,friends{first_name,last_name,picture}"
         };
         NSString *URLString = [NSString stringWithFormat:
                                @"https://graph.facebook.com/me?%@",
